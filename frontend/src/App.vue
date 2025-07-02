@@ -2,7 +2,7 @@
   <div 
     data-theme="borg" 
     class="relative h-screen w-screen font-sans bg-cover bg-center"
-    style="background-image: url('/images/borglatticebackground.png');"
+    :style="`background-image: url('${borgBg}')`"
   >
     <div class="absolute top-4 right-4 z-10">
       <div class="dropdown dropdown-end">
@@ -48,6 +48,7 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted, watch } from 'vue';
+import borgBg from '@/assets/borglatticebackground.png';
 
 const lx = ref(8);
 const ly = ref(8);
